@@ -113,8 +113,8 @@ export const InvitationIntro: React.FC<InvitationIntroProps> = ({ onOpen, onReve
         <div className="video-viewport">
           <video
             ref={videoRef}
-            src="/assets/video/invitation-opening.mp4"
-            poster="/assets/video/invitation-poster.jpg"
+            src="assets/video/invitation-opening.mp4"
+            poster="assets/video/invitation-poster.jpg"
             playsInline
             muted
             preload="auto"

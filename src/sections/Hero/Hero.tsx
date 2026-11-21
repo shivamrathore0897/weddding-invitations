@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalendar }) => {
             style={{ y: photoY, scale: photoScale }}
           >
             <img
-              src="/assets/images/hero/hero-couple.jpg"
+              src="assets/images/hero/hero-couple.jpg"
               alt="Shivam Rathore and Muskan Gupta"
               className="hero-main-image"
               loading="eager"
