@@ -1,0 +1,174 @@
+@use '../../styles/variables' as *;
+
+.share-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(18, 11, 9, 0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.share-modal-card {
+  width: 100%;
+  max-width: 440px;
+  background: $color-ivory;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: 2rem 1.75rem;
+  position: relative;
+  animation: fadeInUp 0.35s ease;
+}
+
+.share-modal-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+
+  .header-icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fdf5e6 0%, #ecdcb9 100%);
+    border: 1px solid $color-gold;
+    color: $color-wine-rich;
+  }
+
+  .modal-eyebrow {
+    font-family: $font-sans;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: $color-gold-deep;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .modal-title {
+    font-family: $font-cinzel;
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: $color-wine-rich;
+    margin-bottom: 0.25rem;
+  }
+
+  .modal-sub {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: $color-gold-deep;
+    font-weight: 500;
+  }
+}
+
+.share-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.share-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1.25rem;
+  border-radius: 8px;
+  font-family: $font-sans;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: $transition-smooth;
+  cursor: pointer;
+
+  &.primary {
+    background: linear-gradient(135deg, $color-wine-rich 0%, $color-wine-deep 100%);
+    color: #ffffff;
+    border: 1px solid $color-gold-border;
+    box-shadow: 0 4px 14px rgba(67, 21, 30, 0.2);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(67, 21, 30, 0.3);
+    }
+  }
+
+  &.whatsapp-btn {
+    background: #25d366;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.2);
+
+    &:hover {
+      background: #20bd5a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+    }
+  }
+}
+
+.copy-link-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+
+  .copy-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: transparent;
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    color: $color-text-secondary;
+    outline: none;
+  }
+
+  .copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1rem;
+    background: rgba(197, 160, 89, 0.15);
+    color: $color-wine-rich;
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(197, 160, 89, 0.25);
+    }
+  }
+}
+
+.toast-copied {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f0f7f2;
+  border: 1px solid #c2e2cc;
+  border-radius: 6px;
+  color: #2e693b;
+  font-family: $font-sans;
+  font-size: 0.75rem;
+  animation: fadeIn 0.2s ease;
+}

@@ -1,0 +1,163 @@
+@use '../../styles/variables' as *;
+
+.closing-section {
+  background: #190f0c;
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(88, 28, 37, 0.45) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(197, 160, 89, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 20% 90%, rgba(36, 18, 14, 0.9) 0%, #120907 100%);
+  color: $color-ivory-light;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3.5rem;
+}
+
+.closing-ambient-glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.closing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.farewell-shloka {
+  margin-bottom: 1.5rem;
+
+  .shloka-om {
+    font-family: $font-cinzel;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $color-gold;
+    letter-spacing: 0.1em;
+  }
+}
+
+.closing-announcement {
+  max-width: 680px;
+  margin-bottom: 3rem;
+
+  .closing-eyebrow {
+    font-family: $font-sans;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: $color-gold-soft;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .closing-title {
+    font-family: $font-cinzel;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    line-height: 1.25;
+  }
+
+  .closing-desc {
+    font-family: $font-cormorant;
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    color: $color-text-light-secondary;
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+  }
+
+  .closing-couple-names-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    .closing-couple-names {
+      font-family: $font-cinzel;
+      font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+      font-weight: 600;
+      color: $color-gold-light;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+    }
+
+    .closing-date-badge {
+      font-family: $font-sans;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: $color-gold-soft;
+    }
+
+    .closing-hashtag {
+      font-family: $font-sans;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      color: $color-gold;
+      background: rgba(197, 160, 89, 0.15);
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+.closing-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.back-to-top-wrap {
+  margin-bottom: 2.5rem;
+
+  .back-to-top-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: $font-sans;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $color-gold-soft;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(223, 194, 141, 0.25);
+    background: transparent;
+    transition: $transition-smooth;
+
+    &:hover {
+      background: rgba(223, 194, 141, 0.15);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.copyright-bar {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+
+  .credit-text {
+    font-family: $font-sans;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: $color-text-light-muted;
+  }
+}

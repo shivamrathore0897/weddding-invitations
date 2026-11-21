@@ -1,0 +1,147 @@
+@use '../../styles/variables' as *;
+
+.calendar-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(18, 11, 9, 0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.calendar-modal-card {
+  width: 100%;
+  max-width: 440px;
+  background: $color-ivory;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: 2rem 1.75rem;
+  position: relative;
+  animation: fadeInUp 0.35s ease;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-secondary;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  transition: $transition-smooth;
+
+  &:hover {
+    background: rgba(197, 160, 89, 0.15);
+    color: $color-wine-rich;
+  }
+}
+
+.calendar-modal-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+
+  .header-icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fdf5e6 0%, #ecdcb9 100%);
+    border: 1px solid $color-gold;
+    color: $color-wine-rich;
+  }
+
+  .modal-eyebrow {
+    font-family: $font-sans;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: $color-gold-deep;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .modal-title {
+    font-family: $font-cinzel;
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: $color-wine-rich;
+    margin-bottom: 0.35rem;
+  }
+
+  .modal-sub {
+    font-family: $font-cormorant;
+    font-size: 1.1rem;
+    color: $color-text-secondary;
+  }
+}
+
+.calendar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.calendar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(36, 22, 19, 0.04);
+  color: $color-text-primary;
+  transition: $transition-smooth;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-gold-deep;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(197, 160, 89, 0.15);
+    background: #fffcf8;
+  }
+
+  .cal-btn-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cal-name {
+    font-family: $font-cinzel;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $color-wine-rich;
+  }
+
+  .cal-desc {
+    font-family: $font-sans;
+    font-size: 0.72rem;
+    color: $color-text-muted;
+    margin-top: 0.2rem;
+  }
+}
+
+.calendar-modal-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+
+  .footer-note {
+    font-family: $font-sans;
+    font-size: 0.72rem;
+    color: $color-text-muted;
+  }
+}

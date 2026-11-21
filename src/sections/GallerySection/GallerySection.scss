@@ -1,0 +1,139 @@
+@use '../../styles/variables' as *;
+
+.gallery-section {
+  background-color: $color-ivory-light;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-heading-center {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3.5rem;
+}
+
+// True CSS Columns Masonry Grid
+.editorial-gallery-masonry {
+  column-count: 1;
+  column-gap: 1.5rem;
+
+  @media (min-width: 600px) {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+
+  @media (min-width: 992px) {
+    column-count: 3;
+    column-gap: 1.75rem;
+  }
+}
+
+.gallery-masonry-card {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  cursor: pointer;
+  background: #ffffff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+    border-color: $color-gold;
+
+    .gallery-thumb-img {
+      transform: scale(1.04);
+    }
+
+    .card-hover-overlay {
+      opacity: 1;
+    }
+  }
+
+  &.aspect-portrait {
+    .card-image-wrap {
+      aspect-ratio: 3 / 4;
+    }
+  }
+
+  &.aspect-landscape {
+    .card-image-wrap {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  &.aspect-square {
+    .card-image-wrap {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  .card-image-wrap {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .gallery-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  }
+
+  .card-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(36, 18, 14, 0.1) 0%, rgba(36, 18, 14, 0.88) 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: #ffffff;
+
+    @media (max-width: 768px) {
+      opacity: 1;
+      background: linear-gradient(180deg, transparent 45%, rgba(36, 18, 14, 0.85) 100%);
+    }
+
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .photo-card-title {
+      font-family: $font-cinzel;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .photo-card-caption {
+      font-family: $font-cormorant;
+      font-size: 0.95rem;
+      color: $color-text-light-secondary;
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+    }
+
+    .view-fullscreen-cue {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: $font-sans;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $color-gold-light;
+    }
+  }
+}

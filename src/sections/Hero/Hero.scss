@@ -1,0 +1,252 @@
+@use '../../styles/variables' as *;
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+  @media (min-width: $bp-tablet) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.hero-ambient-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(223, 194, 141, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+// Sanskrit Shloka Banner
+.shloka-banner {
+  max-width: 640px;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid rgba(197, 160, 89, 0.35);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.35);
+
+  .shloka-symbol {
+    font-family: $font-cinzel;
+    font-size: 1.6rem;
+    color: $color-gold-deep;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .shloka-text {
+    font-family: $font-cormorant;
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: $color-wine-rich;
+    line-height: 1.4;
+  }
+
+  .shloka-english {
+    font-family: $font-sans;
+    font-size: 0.68rem;
+    color: $color-text-muted;
+    letter-spacing: 0.06em;
+    font-style: italic;
+    display: block;
+    margin-top: 0.35rem;
+  }
+}
+
+.hero-main-content {
+  margin-bottom: 2.5rem;
+
+  .hero-eyebrow {
+    font-family: $font-sans;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-family-name {
+    font-family: $font-cinzel;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: $color-gold-deep;
+    margin-bottom: 1rem;
+  }
+
+  .couple-grand-title {
+    font-family: $font-cinzel;
+    font-size: clamp(2.6rem, 7.5vw, 4.8rem);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: $color-wine-rich;
+    line-height: 1.1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin: 0.5rem 0 1.25rem;
+
+    .conjunction {
+      font-family: $font-script;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: $color-gold;
+      font-weight: 400;
+    }
+  }
+
+  .hero-tagline {
+    font-family: $font-cormorant;
+    font-style: italic;
+    font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+    color: $color-text-secondary;
+    max-width: 540px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.5;
+  }
+
+  .hero-meta-badges {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem 1rem;
+    padding: 0.65rem 1.4rem;
+    background: rgba(253, 250, 246, 0.8);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(36, 22, 19, 0.04);
+
+    .meta-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: $font-sans;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: $color-wine-deep;
+    }
+
+    .badge-dot {
+      color: $color-gold;
+    }
+  }
+}
+
+// Hero Photo Showcase
+.hero-photo-showcase {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 3rem;
+  position: relative;
+
+  .photo-parallax-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    transition: transform 0.1s ease-out;
+
+    .hero-main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .photo-overlay-tint {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(36, 18, 14, 0.5) 100%);
+      pointer-events: none;
+    }
+
+    .photo-bottom-caption {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 2;
+
+      .hashtag {
+        font-family: $font-sans;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(8px);
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+.hero-countdown-wrap {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+// Scroll Indicator
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  color: $color-text-muted;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-wine-rich;
+  }
+
+  .scroll-text {
+    font-family: $font-sans;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .scroll-arrow {
+    animation: floatSubtle 2s infinite ease-in-out;
+    color: $color-gold-deep;
+  }
+}

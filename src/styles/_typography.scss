@@ -1,0 +1,101 @@
+@use 'variables' as *;
+
+.font-cinzel {
+  font-family: $font-cinzel;
+  letter-spacing: 0.08em;
+}
+
+.font-cormorant {
+  font-family: $font-cormorant;
+}
+
+.font-script {
+  font-family: $font-script;
+}
+
+.font-sans {
+  font-family: $font-sans;
+}
+
+.section-label {
+  font-family: $font-sans;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: $color-gold-deep;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: $font-cinzel;
+  font-size: clamp(1.85rem, 4.5vw, 2.85rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: $color-text-primary;
+  line-height: 1.25;
+  margin: 0;
+
+  &.text-light {
+    color: $color-text-light-primary;
+  }
+}
+
+.section-subtitle {
+  font-family: $font-cormorant;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  color: $color-text-secondary;
+  margin-top: 0.6rem;
+  line-height: 1.5;
+
+  &.text-light {
+    color: $color-text-light-secondary;
+  }
+}
+
+.ornamental-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.2rem auto 2.4rem;
+  max-width: 240px;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-gold, transparent);
+  }
+
+  .ornament-diamond {
+    width: 6px;
+    height: 6px;
+    background-color: $color-gold;
+    transform: rotate(45deg);
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: $color-gold-soft;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      left: -9px;
+      top: 1px;
+    }
+
+    &::after {
+      right: -9px;
+      top: 1px;
+    }
+  }
+}
