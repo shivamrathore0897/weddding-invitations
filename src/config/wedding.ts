@@ -272,7 +272,7 @@ export const weddingConfig: WeddingConfig = {
   ],
 
   audio: {
-    src: "assets/audio/wedding-ambient.wav",
+    src: "assets/audio/wedding-ambient3.mp3",
     title: "Sacred Harmony & Sitar Serenade",
     artist: "Acoustic Wedding Ensemble"
   }
