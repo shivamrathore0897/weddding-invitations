@@ -5,4 +5,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: './',
   plugins: [react()],
+  server: {
+    host: true, // Listen on all network addresses (0.0.0.0) so phone on same Wi-Fi can access
+    port: 5173,
+  },
 })
