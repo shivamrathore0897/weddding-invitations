@@ -28,12 +28,12 @@ export const weddingConfig: WeddingConfig = {
       name: "Muskan",
       fullName: "Muskan Gupta",
       title: "Bride",
-      photo: "assets/images/story/bride.jpg",
+      photo: "assets/images/story/bride.png",
       bio: "",
       father: "Mr. Prashant Gupta",
       mother: "Mrs. Nisha Gupta"
     },
-    hashtag: "#ShivamWedsMuskan",
+    hashtag: "#ShivamKiMuskan",
     initials: "S & M",
     quote: "In the gentle rhythm of fate, two souls found their sanctuary in each other."
   },
@@ -98,7 +98,7 @@ export const weddingConfig: WeddingConfig = {
       dressCode: "Traditional Attire",
       description: "Join us for an auspicious evening of devotion, soulful bhajans and divine blessings as we celebrate together.",
       iconName: "Sparkles",
-      image: "assets/images/events/sangeet.jpg",
+      image: "assets/images/events/matakajagran.jpg",
       accentColor: "#6c2c3e"
     },
     {
@@ -137,7 +137,7 @@ export const weddingConfig: WeddingConfig = {
       dressCode: "Traditional Attire",
       description: "Join us for the auspicious Ghurchadi ceremony as we begin the wedding celebrations with joy, traditions and blessings.",
       iconName: "Sparkles",
-      image: "assets/images/events/sangeet.jpg",
+      image: "assets/images/events/ghurchadi.jpg",
       accentColor: "#6c2c3e"
     },
     {
@@ -162,7 +162,7 @@ export const weddingConfig: WeddingConfig = {
       title: "A Serendipitous Encounter",
       subtitle: "When paths aligned softly",
       quote: "Some conversations feel like finding a corner of the world you didn't know was missing.",
-      description: "What began as an effortless conversation over warm cups of artisan chai turned into hours of shared ideas, quiet understanding, and an unspoken realization that life had just subtly, beautifully changed.",
+      description: "We started as friends, finding comfort in each other's conversations, sharing childhood memories, thoughts, and everything life had to offer. Even on our busiest days, we made time for each other, whether it was half an hour in the morning or a few stolen moments on metro calls. We slowly became each other's safe space, understanding, trusting, and standing by one another in ways no one else could. And somewhere between all those little moments, friendship quietly turned into love. Perhaps that's how we fell in love, not all at once, but gradually, through a thousand little moments that made us choose each other ❤️",
       image: "assets/images/story/story-1.jpg",
       reverse: false
     },
@@ -172,7 +172,7 @@ export const weddingConfig: WeddingConfig = {
       title: "Growing Together Through Every Season",
       subtitle: "From quiet glances to unwavering support",
       quote: "In each other, we discovered our truest companion and greatest cheerleader.",
-      description: "Through bustling cities, shared travel adventures, career milestones, and the quiet comfort of simple evenings, our bond deepened with every season into a profound and steadfast partnership.",
+      description: "Through every high and low, laughter and tears, and days that tested us, we kept choosing each other. We turned some dreams into reality and dreamed of many more together, until his dreams became mine, mine became his, and all of them became ours. We grew, held on through every storm, celebrated every little victory, and built a life where we both belonged. And after countless memories and a million little moments, we finally got engaged, turning all those dreams of forever into a promise ❤️",
       image: "assets/images/story/story-2.jpg",
       reverse: true
     },
@@ -182,7 +182,7 @@ export const weddingConfig: WeddingConfig = {
       title: "Stepping Into Forever",
       subtitle: "With our hearts full of gratitude",
       quote: "Love is not just looking at each other, but walking side-by-side in the same direction.",
-      description: "Surrounded by the gentle embrace of family and the blessings of the stars, we decided on forever. We cannot wait to begin our next chapter with the people who mean the world to us.",
+      description: "And now, surrounded by the love and blessings of our families, we’re ready to begin the next chapter of our story. With hearts full of love, we promise to keep choosing each other through every season of life, cherishing this bond and all that lies ahead. A promise of love, togetherness, and forever ❤️",
       image: "assets/images/story/story-3.jpg",
       reverse: false
     }
@@ -194,56 +194,80 @@ export const weddingConfig: WeddingConfig = {
       title: "Eternal Moments",
       aspect: "portrait",
       src: "assets/images/gallery/gallery-1.jpg",
-      caption: "Framed in the serene evening warmth of the royal courtyard."
+      // caption: "Framed in the serene evening warmth of the royal courtyard."
+      caption: ""
     },
     {
       id: "g2",
-      title: "Quiet Radiance",
-      aspect: "landscape",
+      // title: "Quiet Radiance",
+       title: "Eternal Moments",
+      aspect: "portrait",
       src: "assets/images/gallery/gallery-2.jpg",
-      caption: "Laughter caught unawares — the purest kind of happiness."
+      // caption: "Laughter caught unawares — the purest kind of happiness."
+      caption: ""
     },
     {
       id: "g3",
-      title: "The Regal Sanctum",
-      aspect: "landscape",
+      // title: "The Regal Sanctum",
+       title: "Eternal Moments",
+      aspect: "portrait",
       src: "assets/images/gallery/gallery-3.jpg",
-      caption: "The majestic arched colonnades that will bear witness to our vows."
+      // caption: "The majestic arched colonnades that will bear witness to our vows."
+      caption: ""
     },
     {
       id: "g4",
-      title: "Sacred Intricacies",
+      // title: "Sacred Intricacies",
+       title: "Eternal Moments",
       aspect: "portrait",
       src: "assets/images/gallery/gallery-4.jpg",
-      caption: "The delicate touch of henna carrying ancient blessings of love."
+      // caption: "The delicate touch of henna carrying ancient blessings of love."
+      caption: ""
     },
     {
       id: "g5",
-      title: "Golden Hour Solitude",
+      // title: "Golden Hour Solitude",
+       title: "Eternal Moments",
       aspect: "portrait",
       src: "assets/images/gallery/gallery-5.jpg",
-      caption: "Bathed in the amber twilight glow before the festivities begin."
+      // caption: "Bathed in the amber twilight glow before the festivities begin."
+      caption: ""
     },
     {
       id: "g6",
-      title: "Token of Eternity",
+      // title: "Token of Eternity",
+       title: "Eternal Moments",
       aspect: "square",
       src: "assets/images/gallery/gallery-6.jpg",
-      caption: "Two bands intertwined, symbolizing an unbreakable covenant."
+      // caption: "Two bands intertwined, symbolizing an unbreakable covenant."
+      caption: ""
     },
     {
       id: "g7",
-      title: "Festive Joy",
+      // title: "Festive Joy",
+       title: "Eternal Moments",
       aspect: "landscape",
       src: "assets/images/gallery/gallery-7.jpg",
-      caption: "A shower of fragrant marigold and rose petals blessing the couple."
+      // caption: "A shower of fragrant marigold and rose petals blessing the couple."
+      caption: ""
     },
     {
       id: "g8",
-      title: "The Serenade",
+      // title: "The Serenade",
+       title: "Eternal Moments",
       aspect: "portrait",
       src: "assets/images/gallery/gallery-8.jpg",
-      caption: "Melodies that echo through the corridors of memory."
+      // caption: "Melodies that echo through the corridors of memory."
+      caption: ""
+    },
+    {
+      id: "g9",
+      // title: "The Serenade",
+       title: "Eternal Moments",
+      aspect: "portrait",
+      src: "assets/images/gallery/gallery-9.jpg",
+      // caption: "Melodies that echo through the corridors of memory."
+      caption: ""
     }
   ],
 

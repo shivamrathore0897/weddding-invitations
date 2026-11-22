@@ -40,9 +40,6 @@ export const Closing: React.FC<ClosingProps> = ({ onOpenCalendar }) => {
           </p>
 
           <div className="closing-couple-names-wrap">
-            <h3 className="closing-couple-names">
-              {weddingConfig.couple.groom.fullName} &amp; {weddingConfig.couple.bride.fullName}
-            </h3>
             <span className="closing-date-badge">
               {weddingConfig.weddingDate.dayOfWeek}, {weddingConfig.weddingDate.displayDate} &bull; {weddingConfig.weddingDate.city}
             </span>
@@ -69,12 +66,6 @@ export const Closing: React.FC<ClosingProps> = ({ onOpenCalendar }) => {
             <ArrowUp size={16} />
             <span>Back To Top</span>
           </button>
-        </div>
-
-        <div className="copyright-bar">
-          <p className="credit-text">
-            Celebration of Shivam Rathore &amp; Muskan Gupta &bull; 12 December 2026
-          </p>
         </div>
       </div>
     </footer>

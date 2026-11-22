@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .events-section {
   background-color: $color-ivory-light;
@@ -40,7 +40,10 @@
   border-radius: 12px;
   box-shadow: 0 6px 24px rgba(36, 22, 19, 0.05);
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 
   @media (min-width: $bp-tablet) {
     grid-template-columns: 320px 1fr;
@@ -67,6 +70,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: bottom;
     }
 
     .event-number-tag {

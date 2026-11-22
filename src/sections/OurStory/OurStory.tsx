@@ -104,7 +104,7 @@ export const OurStory: React.FC = () => {
             >
               <div className="chapter-visual">
                 <div className="chapter-photo-frame">
-                  <img src={chapter.image} alt={chapter.title} className="chapter-img" loading="lazy" />
+                  <img src={chapter.image} alt={chapter.title} className="chapter-img" style={{ height: idx < 2 ? 'unset' : '100%' }} loading="lazy" />
                 </div>
                 <div className="chapter-step-badge">
                   <span>0{idx + 1}</span>

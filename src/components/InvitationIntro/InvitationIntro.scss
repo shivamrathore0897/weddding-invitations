@@ -1,11 +1,11 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .invitation-video-overlay {
   position: fixed;
   inset: 0;
   z-index: 9999;
   background-color: #140b09;
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 35%, rgba(98, 30, 42, 0.55) 0%, transparent 68%),
     radial-gradient(circle at 50% 90%, rgba(18, 9, 7, 0.98) 0%, #0a0403 100%);
   display: flex;
@@ -42,13 +42,17 @@
   border-radius: 14px;
   background-color: #24110d;
   border: 1.5px solid rgba(223, 194, 141, 0.45);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(223, 194, 141, 0.15);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(223, 194, 141, 0.15);
   cursor: pointer;
   outline: none;
   overflow: hidden;
   will-change: transform, box-shadow;
   transform: translate3d(0, 0, 0) scale(1);
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s ease;
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.8s ease;
 
   @media (max-width: 480px) {
     max-width: 340px;
@@ -119,7 +123,8 @@
   position: absolute;
   bottom: 2.2rem;
   left: 50%;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
+  transform: translate(-50%, 0%);
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -134,14 +139,18 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #fce8bd;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(223, 194, 141, 0.25);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.6),
+    0 0 16px rgba(223, 194, 141, 0.25);
   animation: pulseGently 2.4s infinite ease-in-out;
   pointer-events: auto;
   cursor: pointer;
   z-index: 15;
   white-space: nowrap;
   will-change: opacity, transform;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 
   &.prompt-hidden {
     opacity: 0;
