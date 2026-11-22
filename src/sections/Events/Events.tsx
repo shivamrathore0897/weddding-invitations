@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Shirt } from 'lucide-react';
 import { weddingConfig } from '../../config/wedding';
+import { ProgressiveImage } from '../../components/ProgressiveImage/ProgressiveImage';
 import './Events.scss';
 
 export const Events: React.FC = () => {
@@ -25,7 +26,7 @@ export const Events: React.FC = () => {
             <span className="ornament-diamond" />
           </div>
           <p className="section-subtitle">
-            Two sacred days of vibrant rituals, music, joyous dancing, and starlit feasts.
+            The sacred days of vibrant rituals, music, joyous dancing, and starlit feasts.
           </p>
         </motion.div>
 
@@ -41,7 +42,13 @@ export const Events: React.FC = () => {
               transition={{ duration: 0.8, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="event-photo-wrapper">
-                <img src={event.image} alt={event.title} className="event-photo" loading="lazy" decoding="async" />
+                <ProgressiveImage
+                  src={event.image}
+                  alt={event.title}
+                  className="event-photo"
+                  wrapperClassName="event-photo-wrap"
+                  loading="lazy"
+                />
                 <div className="event-number-tag">
                   <span>0{index + 1}</span>
                 </div>

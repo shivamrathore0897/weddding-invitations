@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, Calendar, MapPin } from 'lucide-react';
 import { weddingConfig } from '../../config/wedding';
 import { Countdown } from '../../components/Countdown/Countdown';
+import { ProgressiveImage } from '../../components/ProgressiveImage/ProgressiveImage';
 import './Hero.scss';
 
 interface HeroProps {
@@ -94,12 +95,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalendar }) => {
             className="photo-parallax-wrapper arch-frame"
             style={{ y: photoY, scale: photoScale }}
           >
-            <img
+            <ProgressiveImage
               src="assets/images/hero/hero-couple.jpg"
               alt="Shivam Rathore and Muskan Gupta"
               className="hero-main-image"
+              wrapperClassName="hero-main-image-wrap"
               loading="eager"
-              decoding="async"
             />
             <div className="photo-overlay-tint" />
             <div className="photo-bottom-caption">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Eye } from 'lucide-react';
 import { weddingConfig } from '../../config/wedding';
 import type { GalleryPhoto } from '../../types/wedding';
+import { ProgressiveImage } from '../../components/ProgressiveImage/ProgressiveImage';
 import './GallerySection.scss';
 
 interface GallerySectionProps {
@@ -55,12 +56,12 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenPhoto }) =
               }}
             >
               <div className="card-image-wrap">
-                <img
+                <ProgressiveImage
                   src={photo.src}
                   alt={photo.title}
                   className="gallery-thumb-img"
+                  wrapperClassName="gallery-image-wrap"
                   loading="lazy"
-                  decoding="async"
                 />
                 <div className="card-hover-overlay">
                   <div className="overlay-content">

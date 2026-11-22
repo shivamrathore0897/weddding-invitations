@@ -49,7 +49,7 @@ export function App() {
   };
 
   return (
-    <div className="wedding-experience-root" onClick={() => !musicActive && setMusicActive(true)}>
+    <div className="wedding-experience-root">
       {/* 1. Opening Invitation / Wax-Sealed Envelope Reveal */}
       <InvitationIntro
         isOpen={isInvitationOpen}

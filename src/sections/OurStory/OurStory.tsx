@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { weddingConfig } from '../../config/wedding';
+import { ProgressiveImage } from '../../components/ProgressiveImage/ProgressiveImage';
 import './OurStory.scss';
 
 export const OurStory: React.FC = () => {
@@ -41,7 +42,13 @@ export const OurStory: React.FC = () => {
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="profile-image-container arch-frame">
-              <img src={groom.photo} alt={groom.fullName} className="profile-photo" loading="lazy" decoding="async" />
+              <ProgressiveImage
+                src={groom.photo}
+                alt={groom.fullName}
+                className="profile-photo"
+                wrapperClassName="profile-photo-wrap"
+                loading="lazy"
+              />
               <div className="profile-overlay-tag">
                 <span className="tag-role">The Groom</span>
               </div>
@@ -76,7 +83,13 @@ export const OurStory: React.FC = () => {
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="profile-image-container arch-frame">
-              <img src={bride.photo} alt={bride.fullName} className="profile-photo" loading="lazy" decoding="async" />
+              <ProgressiveImage
+                src={bride.photo}
+                alt={bride.fullName}
+                className="profile-photo"
+                wrapperClassName="profile-photo-wrap"
+                loading="lazy"
+              />
               <div className="profile-overlay-tag">
                 <span className="tag-role">The Bride</span>
               </div>
@@ -104,7 +117,13 @@ export const OurStory: React.FC = () => {
             >
               <div className="chapter-visual">
                 <div className="chapter-photo-frame">
-                  <img src={chapter.image} alt={chapter.title} className="chapter-img" style={{ height: idx < 2 ? 'unset' : '100%' }} loading="lazy" decoding="async" />
+                  <ProgressiveImage
+                    src={chapter.image}
+                    alt={chapter.title}
+                    className="chapter-img"
+                    wrapperClassName="chapter-img-wrap"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="chapter-step-badge">
                   <span>0{idx + 1}</span>

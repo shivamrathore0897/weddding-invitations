@@ -1,0 +1,92 @@
+.progressive-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1e110e;
+  display: block;
+
+  // 1. Shimmer Skeleton Background
+  .progressive-shimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      rgba(38, 20, 17, 0.9) 0%,
+      rgba(65, 34, 30, 0.95) 25%,
+      rgba(92, 48, 42, 0.85) 50%,
+      rgba(38, 20, 17, 0.9) 100%
+    );
+    background-size: 200% 100%;
+    animation: goldShimmerEffect 2.2s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.6s ease;
+  }
+
+  // 2. Low-Quality Blur-Up Thumbnail
+  .progressive-thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(14px);
+    transform: scale(1.08);
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity;
+
+    &.thumb-hidden {
+      opacity: 0;
+    }
+    &.thumb-visible {
+      opacity: 0.95;
+    }
+  }
+
+  // 3. High-Resolution Master Image with Smooth Dissolve
+  .progressive-highres {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    z-index: 3;
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, filter, transform;
+
+    &.highres-loading {
+      opacity: 0;
+      filter: blur(8px);
+      transform: scale(1.03);
+    }
+
+    &.highres-loaded {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
+  }
+
+  &.is-loaded {
+    .progressive-shimmer {
+      opacity: 0;
+      animation: none;
+    }
+  }
+}
+
+@keyframes goldShimmerEffect {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
