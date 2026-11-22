@@ -97,13 +97,7 @@ export const InvitationIntro: React.FC<InvitationIntroProps> = ({ onOpen, onReve
       <div className="ambient-halo-glow" />
 
       {/* Video Invitation Card Container */}
-      <div
-        className={`video-card-container ${isPlaying ? 'is-playing' : ''}`}
-        onClick={handleOpenClick}
-        role="button"
-        tabIndex={0}
-        aria-label="Tap to open wedding invitation"
-      >
+      <div className={`video-card-container ${isPlaying ? 'is-playing' : ''}`}>
         {/* Corner Metallic Gold Filigree */}
         <div className="corner-filigree top-left" />
         <div className="corner-filigree top-right" />
@@ -129,12 +123,17 @@ export const InvitationIntro: React.FC<InvitationIntroProps> = ({ onOpen, onReve
           />
         </div>
 
-        {/* Tap to Open Prompt — Smoothly fades when video begins playing */}
-        <div className={`tap-open-prompt ${isPlaying ? 'prompt-hidden' : ''}`}>
+        {/* Tap to Open Prompt Button — ONLY clicking this button opens the invitation */}
+        <button
+          type="button"
+          className={`tap-open-prompt ${isPlaying ? 'prompt-hidden' : ''}`}
+          onClick={handleOpenClick}
+          aria-label="Tap to open wedding invitation"
+        >
           <Sparkles size={14} className="sparkle-icon" />
           <span>Tap to open invitation</span>
           <Sparkles size={14} className="sparkle-icon" />
-        </div>
+        </button>
 
         {/* Golden Radiant Light Bloom on Reveal */}
         <div className={`cinematic-light-bloom ${isFading ? 'bloom-max' : ''}`} />

@@ -60,6 +60,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenPhoto }) =
                   alt={photo.title}
                   className="gallery-thumb-img"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="card-hover-overlay">
                   <div className="overlay-content">

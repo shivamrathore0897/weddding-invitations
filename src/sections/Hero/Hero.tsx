@@ -99,6 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalendar }) => {
               alt="Shivam Rathore and Muskan Gupta"
               className="hero-main-image"
               loading="eager"
+              decoding="async"
             />
             <div className="photo-overlay-tint" />
             <div className="photo-bottom-caption">

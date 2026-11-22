@@ -41,7 +41,7 @@ export const Events: React.FC = () => {
               transition={{ duration: 0.8, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="event-photo-wrapper">
-                <img src={event.image} alt={event.title} className="event-photo" loading="lazy" />
+                <img src={event.image} alt={event.title} className="event-photo" loading="lazy" decoding="async" />
                 <div className="event-number-tag">
                   <span>0{index + 1}</span>
                 </div>

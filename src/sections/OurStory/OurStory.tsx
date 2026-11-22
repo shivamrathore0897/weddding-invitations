@@ -41,7 +41,7 @@ export const OurStory: React.FC = () => {
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="profile-image-container arch-frame">
-              <img src={groom.photo} alt={groom.fullName} className="profile-photo" loading="lazy" />
+              <img src={groom.photo} alt={groom.fullName} className="profile-photo" loading="lazy" decoding="async" />
               <div className="profile-overlay-tag">
                 <span className="tag-role">The Groom</span>
               </div>
@@ -76,7 +76,7 @@ export const OurStory: React.FC = () => {
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="profile-image-container arch-frame">
-              <img src={bride.photo} alt={bride.fullName} className="profile-photo" loading="lazy" />
+              <img src={bride.photo} alt={bride.fullName} className="profile-photo" loading="lazy" decoding="async" />
               <div className="profile-overlay-tag">
                 <span className="tag-role">The Bride</span>
               </div>
@@ -104,7 +104,7 @@ export const OurStory: React.FC = () => {
             >
               <div className="chapter-visual">
                 <div className="chapter-photo-frame">
-                  <img src={chapter.image} alt={chapter.title} className="chapter-img" style={{ height: idx < 2 ? 'unset' : '100%' }} loading="lazy" />
+                  <img src={chapter.image} alt={chapter.title} className="chapter-img" style={{ height: idx < 2 ? 'unset' : '100%' }} loading="lazy" decoding="async" />
                 </div>
                 <div className="chapter-step-badge">
                   <span>0{idx + 1}</span>
